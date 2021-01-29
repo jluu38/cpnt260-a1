@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,700;1,400&family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+body {
+  background-color: white;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr);
+
+  align-content: baseline;
+}
+
+h1 {
+  justify-self: center;
+  margin-top: 2rem;
+
+  font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+  font-variant: small-caps;
+}
+
+nav {
+  grid-column: 2 / 6;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 3rem;
+  align-content: end;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+
+  font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color: black;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
