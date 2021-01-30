@@ -2,17 +2,16 @@
 
 body {
   background-color: #454A59;
-
   display: grid;
   grid-template-columns: 10rem 1fr 1fr 1fr 1fr;
   grid-template-rows: 7rem 1fr;
   /* grid-template-areas: "header nav nav nav nav
                         . img img content . .
                         footer footer content"; */
-                        /* couldn't quite figure out grid areas */
+                        /* couldn't quite figure out template areas yet */
 }
 
-/* Left Aside */
+/* Left Header */
 header {
   grid-area: 1 / 1 / 4 / 2;
   color: white;
@@ -32,7 +31,6 @@ i.fas:hover {
 h1 {
   justify-self: self-end;
   margin-top: 0;
-  /* margin-right: 0; */
 
   writing-mode:vertical-rl;
   line-height: 2rem;
@@ -41,7 +39,6 @@ h1 {
   font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
   font-variant: small-caps;
   font-size: clamp(2rem, -2.5455rem + 22.7273vw, 7rem);
-
 }
 
 /* Horizontal Nav Bar */
@@ -57,14 +54,11 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
   margin-top: 1rem;
-
   justify-items: center;
 }
 
 ul li {
   list-style: none;
-  /* padding: 1rem; */
-
 }
 
 a {
@@ -88,7 +82,6 @@ a:hover {
 .button {
   border: 1.5px solid #658278;
   border-radius: 20%;
-  /* margin-left: 10rem; */
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
 }
 
@@ -99,7 +92,6 @@ a:hover {
 }
 
 /* Main */
-
 section {
   grid-column-start: 3;
   grid-column-end: 5; 
@@ -126,7 +118,6 @@ h2 {
 p {
   font-family: 'Cutive', serif;
   color: white;
-
   line-height: 2rem;
   letter-spacing: 0.1rem;
 }
@@ -134,7 +125,6 @@ p {
 .summ {
   margin-left: 5rem;
   max-width: 35ch;
-
   text-align: start;
 }
 
@@ -142,9 +132,9 @@ p {
   grid-column-end: span 2;
   margin-top: 2rem;
   max-width: 45ch;
+  justify-self: right;
 
   text-align: end;
-  justify-self: right;
 }
 
 .grid {
@@ -177,7 +167,7 @@ footer {
 /* couldn't align footer to the bottom of its container; just made another row in the body grid */
 
 /* BREAKPOINT */
-
+/* this is clunky -- did it last, as was not suggested */
 @media screen and (max-width:840px) {
 
   body {
@@ -251,6 +241,7 @@ footer {
     align-self: end;
   }
 }
+
 /* couldn't figure out why margins were overflowing and causing a horizontal scroll bar;
 found out it only happens in google inspector*/
   /*body {
