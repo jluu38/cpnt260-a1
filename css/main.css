@@ -1,15 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,700;1,400&family=Montserrat:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive&family=Montserrat:ital,wght@0,700;1,700&display=swap');
 
 body {
   background-color: #454A59;
 
   display: grid;
-  grid-template-columns: 1fr repeat(4, minmax(auto-fit, 2fr));
-  grid-template-rows: auto;
+  grid-template-columns: 10rem 1fr 1fr 1fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
+  /* grid-template-areas: "header nav nav nav nav
+                        . img img content . .
+                        footer footer content"; */
+                        /* couldn't quite figure out grid areas */
 }
 
+/* Left Aside */
 header {
   color: white;
+
+  text-align:center;
+}
+
+i.fas {
+  margin-top: 2rem;
+  font-size: clamp(2rem, 0.5000rem + 6.6667vw, 4rem);
+}
+
+i.fas:hover {
+  color: #658278
 }
 
 
@@ -19,7 +35,7 @@ h1 {
   grid-template-rows: 1fr; */
 
   justify-self: self-end;
-  margin-top: -2rem;
+  margin-top: 0;
   /* margin-right: 0; */
 
   writing-mode:vertical-rl;
@@ -28,20 +44,25 @@ h1 {
 
   font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
   font-variant: small-caps;
-  font-size: 7rem;
+  font-size: clamp(4rem, 1.7500rem + 10.0000vw, 7rem);
+
 }
 
+/* Horizontal Nav Bar */
+
 nav {
-  grid-row-end: span 3;
-  grid-column-end: span 6;
-  justify-content: center;
+  grid-row: 1;
+  grid-column: 2 / 6;
 }
+
 
 ul {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(30ch, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(1rem, 1fr));
   
+  margin-top: 3rem;
+  justify-items: center;
 }
 
 ul li {
@@ -49,13 +70,16 @@ ul li {
 }
 
 a {
+  color: white;
   font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
   font-variant: small-caps;
   font-style: italic;
   font-weight: 700;
-  color: white;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+
+  line-height: 4rem;
   text-decoration: none;
+  text-align: baseline;
 }
 
 .grid {
@@ -66,23 +90,28 @@ a {
 a:hover {
   color: #BDC9B2;
   font-style: normal;
+  font-weight: 700;
 }
 
 .button {
-  border: 1.5px solid #BDC9B2;
-  background-color: transparent;
+  border: 2px solid #658278;
   border-radius: 20%;
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
 }
 
 .button:hover {
   border: 1px solid white;
-  color: #BDC9B2;
+  background-color: transparent;
   font-style: normal;
 }
 
-i.fas {
-  justify-self: start;
-  font-size: 4rem;
+
+
+.responsive {
+  grid-template-columns: auto-fit;
 }
 
+h2 {
+font-family: 'Cutive', serif;
+/* font-weight: 700; */
+}
